@@ -14,7 +14,6 @@ sys.path.append('..')
 from manager import ConfigManager, ModelManager
 from metrics import RankEvaluator, MRREvaluator, NDCGEvaluator, MAPEvaluator
 
-
 def extract_features_from_dataset(data, model, transform, batch_size=32):
     """Extract features from a dataset"""
     features = []

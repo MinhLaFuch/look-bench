@@ -13,7 +13,7 @@ from typing import Dict, Any, Tuple, List
 from tqdm import tqdm
 from utils.logging import get_logger, log_structured, log_error_with_context
 from models import ModelFactory, list_available_models
-from datasets import BaseDataLoader
+from lookbench_datasets  import BaseDataLoader
 
 
 class ConfigManager:

@@ -28,7 +28,7 @@ class GRLiteModel(BaseModel):
     GR-Lite fashion image search model
     Based on DINOv3 with custom training for fashion domain
     """
-
+    
     @classmethod
     def load_model(cls, model_name: str = "srpone/gr-lite", model_path: str = None, **kwargs) -> Tuple[nn.Module, 'GRLiteModel']:
         """
@@ -92,7 +92,7 @@ class GRLiteModel(BaseModel):
                     if isinstance(x, torch.Tensor):
                         # For tensor input, use the underlying model directly
                         with torch.no_grad():
-                            outputs = self.model.model(x)
+                            outputs = self.model(x)
                             # Extract features from DINOv3 output
                             if hasattr(outputs, 'pooler_output') and outputs.pooler_output is not None:
                                 features = outputs.pooler_output
